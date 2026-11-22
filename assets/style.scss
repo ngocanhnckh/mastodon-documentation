@@ -610,12 +610,21 @@ main {
     border-radius: 4px;
     -webkit-hyphens: none;
     hyphens: none;
-    white-space: pre;
+    display: inline-block;
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.3;
+    vertical-align: baseline;
   }
 
   pre code {
+    display: inline;
+    line-height: inherit;
     background: transparent;
     padding: 0;
+    white-space: pre;
+    overflow-wrap: normal;
   }
 
   dl {
@@ -805,6 +814,7 @@ main {
   margin: 26px 0;
   padding: 24px 24px 24px 50px;
   border-radius: 4px;
+  overflow-wrap: anywhere;
 
   &-icon {
     position: absolute;
